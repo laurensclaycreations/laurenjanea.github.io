@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lauren's Clay Creations</title>
+<style>
+:root{--cream:#f7f0e6;--ivory:#fffaf4;--pink:#e98ca9;--dark:#191617;--muted:#756b6b;--border:#e7d9d2}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--ivory);color:var(--dark)}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,250,244,.97);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:15px 7%}
+.logo{font-family:Georgia,serif;font-size:1.3rem;font-weight:bold}.logo span{color:var(--pink)}
+nav a{color:var(--dark);text-decoration:none;margin-left:18px;font-size:.9rem}
+.hero{min-height:75vh;background:linear-gradient(135deg,var(--cream),#fff4f8);display:grid;place-items:center;text-align:center;padding:70px 7%}
+.hero h1{font-family:Georgia,serif;font-size:clamp(3rem,8vw,6rem);line-height:.95;margin:15px 0}
+.hero p{max-width:620px;margin:20px auto;color:var(--muted);line-height:1.7}
+.btn{display:inline-block;background:var(--dark);color:white;text-decoration:none;border-radius:30px;padding:13px 23px;margin:5px;font-weight:bold}.pink{background:var(--pink);color:var(--dark)}
+section{padding:70px 7%;max-width:1200px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#c85f80;font-size:.72rem;font-weight:bold}
+h2{font-family:Georgia,serif;font-size:2.5rem;margin:8px 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden}.photo{height:220px;background:#f1e7df;display:grid;place-items:center;color:#9a8888;text-align:center}.card-body{padding:18px}.card h3{font-family:Georgia,serif;margin:0 0 8px}.blank{color:#999;font-style:italic;line-height:1.5}
+.price-list{max-width:800px}.price-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:18px 0;gap:20px}.price-row span{color:#999;font-style:italic}
+.note{background:#fff0f4;padding:18px;border-radius:15px;margin-top:25px;color:#65545a;line-height:1.6}
+.policy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.policy{background:white;border:1px solid var(--border);padding:23px;border-radius:18px;min-height:170px}.policy h3{font-family:Georgia,serif}.policy p{color:#999;line-height:1.6}
+.about{background:var(--cream);max-width:none}.about-inner{max-width:1200px;margin:auto}
+.contact{text-align:center;background:var(--dark);color:white;max-width:none}.contact p{color:#ccc}.contact a{color:#ffb0c7}
+footer{text-align:center;background:var(--dark);color:#999;padding:25px;font-size:.8rem}
+@media(max-width:700px){nav{flex-direction:column;gap:10px}nav a{margin:0 5px;font-size:.78rem}.hero{min-height:65vh}.price-row{align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Lauren's <span>Clay Creations</span></div>
+  <div>
+    <a href="#shop">Shop</a>
+    <a href="#prices">Prices</a>
+    <a href="#policies">Policies</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">Handmade • Custom • One of a Kind</div>
+    <h1>Lauren's<br><span style="color:#e98ca9">Clay Creations</span></h1>
+    <p>YOUR SHORT BUSINESS DESCRIPTION GOES HERE</p>
+    <a class="btn" href="#shop">Shop</a>
+    <a class="btn pink" href="https://www.instagram.com/laurenjanea/" target="_blank">Instagram</a>
+  </div>
+</header>
+
+<section id="shop">
+  <div class="eyebrow">Shop</div>
+  <h2>My Creations</h2>
+  <div class="grid">
+    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
+    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
+    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
+    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
+    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
+    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="eyebrow">Prices</div>
+  <h2>Price List</h2>
+  <div class="price-list">
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
+  </div>
+  <div class="note">ADD ANY PRICING NOTES HERE — custom fees, rush fees, shipping, deposits, etc.</div>
+</section>
+
+<section id="policies">
+  <div class="eyebrow">Policies</div>
+  <h2>Before You Order</h2>
+  <div class="policy-grid">
+    <div class="policy"><h3>Custom Orders</h3><p>WRITE YOUR CUSTOM ORDER POLICY HERE</p></div>
+    <div class="policy"><h3>Payment</h3><p>WRITE YOUR PAYMENT POLICY HERE</p></div>
+    <div class="policy"><h3>Processing Time</h3><p>WRITE YOUR PROCESSING / TURNAROUND POLICY HERE</p></div>
+    <div class="policy"><h3>Returns & Exchanges</h3><p>WRITE YOUR RETURN / EXCHANGE POLICY HERE</p></div>
+    <div class="policy"><h3>Shipping / Pickup</h3><p>WRITE YOUR SHIPPING OR LOCAL PICKUP POLICY HERE</p></div>
+    <div class="policy"><h3>Care Instructions</h3><p>WRITE YOUR PRODUCT CARE INFORMATION HERE</p></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="eyebrow">About</div>
+    <h2>Meet Lauren ♡</h2>
+    <p class="blank" style="max-width:760px;font-size:1.05rem;line-height:1.8">WRITE YOUR ABOUT ME / BUSINESS STORY HERE</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="eyebrow" style="color:#ffb0c7">Contact</div>
+  <h2>Let's Create Something!</h2>
+  <p>ADD YOUR CONTACT INFORMATION OR ORDER INSTRUCTIONS HERE</p>
+  <a class="btn pink" href="https://www.instagram.com/laurenjanea/" target="_blank">@laurenjanea</a>
+</section>
+
+<footer>© 2026 Lauren's Clay Creations • ADD ANY FOOTER INFORMATION HERE</footer>
+
+</body>
+</html>

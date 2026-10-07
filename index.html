@@ -3,111 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lauren's Clay Creations</title>
+<title>Lauren’s Clay Creations</title>
+<meta name="description" content="Handmade clay creations by Lauren. Shop keychains, lighter cases, holders, hair clips and custom pieces in Kennesaw, GA and Savannah, GA.">
 <style>
-:root{--cream:#f7f0e6;--ivory:#fffaf4;--pink:#e98ca9;--dark:#191617;--muted:#756b6b;--border:#e7d9d2}
+:root{--cream:#fff8ef;--pink:#f58bb3;--hot:#e85b91;--black:#151315;--muted:#756b70;--white:#fff;--line:#eadbd2;--card:#fffdf9}
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--ivory);color:var(--dark)}
-nav{position:sticky;top:0;z-index:10;background:rgba(255,250,244,.97);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:15px 7%}
-.logo{font-family:Georgia,serif;font-size:1.3rem;font-weight:bold}.logo span{color:var(--pink)}
-nav a{color:var(--dark);text-decoration:none;margin-left:18px;font-size:.9rem}
-.hero{min-height:75vh;background:linear-gradient(135deg,var(--cream),#fff4f8);display:grid;place-items:center;text-align:center;padding:70px 7%}
-.hero h1{font-family:Georgia,serif;font-size:clamp(3rem,8vw,6rem);line-height:.95;margin:15px 0}
-.hero p{max-width:620px;margin:20px auto;color:var(--muted);line-height:1.7}
-.btn{display:inline-block;background:var(--dark);color:white;text-decoration:none;border-radius:30px;padding:13px 23px;margin:5px;font-weight:bold}.pink{background:var(--pink);color:var(--dark)}
-section{padding:70px 7%;max-width:1200px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#c85f80;font-size:.72rem;font-weight:bold}
-h2{font-family:Georgia,serif;font-size:2.5rem;margin:8px 0 32px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
-.card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden}.photo{height:220px;background:#f1e7df;display:grid;place-items:center;color:#9a8888;text-align:center}.card-body{padding:18px}.card h3{font-family:Georgia,serif;margin:0 0 8px}.blank{color:#999;font-style:italic;line-height:1.5}
-.price-list{max-width:800px}.price-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:18px 0;gap:20px}.price-row span{color:#999;font-style:italic}
-.note{background:#fff0f4;padding:18px;border-radius:15px;margin-top:25px;color:#65545a;line-height:1.6}
-.policy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.policy{background:white;border:1px solid var(--border);padding:23px;border-radius:18px;min-height:170px}.policy h3{font-family:Georgia,serif}.policy p{color:#999;line-height:1.6}
-.about{background:var(--cream);max-width:none}.about-inner{max-width:1200px;margin:auto}
-.contact{text-align:center;background:var(--dark);color:white;max-width:none}.contact p{color:#ccc}.contact a{color:#ffb0c7}
-footer{text-align:center;background:var(--dark);color:#999;padding:25px;font-size:.8rem}
-@media(max-width:700px){nav{flex-direction:column;gap:10px}nav a{margin:0 5px;font-size:.78rem}.hero{min-height:65vh}.price-row{align-items:flex-start}}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--black);line-height:1.55}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:rgba(255,248,239,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1150px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-family:Georgia,serif;font-size:25px;font-weight:700}.logo span{color:var(--hot)}
+nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:700}nav a:hover{color:var(--hot)}
+.hero{max-width:none;margin:0;padding:74px max(22px,calc((100vw - 1150px)/2)) 82px;background:#ff6b1a;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:48% 52% 45% 55%;background:#ff9fc5;top:-180px;left:-150px;transform:rotate(-12deg)}
+.hero:after{content:"";position:absolute;width:330px;height:330px;border-radius:52% 48% 60% 40%;background:#ff9fc5;right:-120px;bottom:-170px;transform:rotate(18deg)}
+.hero-copy{position:relative;z-index:2}.kicker{text-transform:uppercase;letter-spacing:2.4px;color:#fff;font-size:12px;font-weight:900}.hero h1{font-family:Georgia,serif;font-size:clamp(46px,6.5vw,76px);line-height:.97;margin:13px 0 20px;color:#fff7ef;max-width:680px}.hero p{font-size:18px;color:#fff3e9;max-width:610px}.location{display:inline-flex;margin:16px 0;padding:9px 14px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(255,248,239,.18);color:#fff;font-weight:700}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-block;border:1px solid #fff7ef;padding:12px 19px;border-radius:999px;font-weight:800}.btn.primary{background:#fff7ef;color:#151315;border-color:#fff7ef}.btn.pink{background:#f58bb3;border-color:#f58bb3;color:#151315}
+.hero-art{min-height:475px;position:relative;z-index:2;background:#fff7ef;border-radius:48% 52% 42% 58%;display:flex;align-items:center;justify-content:center;padding:25px;box-shadow:0 22px 55px rgba(70,25,10,.22);transform:rotate(2deg)}
+.hero-art .art-inner{position:relative;overflow:hidden;border-radius:38% 62% 48% 52%;width:100%;height:100%;min-height:420px;display:flex;align-items:center;justify-content:center;color:#151315;text-align:center;padding:30px;background:#ffd9e7}.art-inner:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ff6b1a;top:-65px;right:-40px;opacity:.95}.art-inner:after{content:"";position:absolute;width:145px;height:145px;border-radius:50%;background:#f58bb3;bottom:-55px;left:-35px}.art-inner .brand-mark{position:relative;z-index:1}.art-inner .mini{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c84b79;font-weight:900;margin-bottom:16px}.art-inner h2{font-family:Georgia,serif;font-size:clamp(40px,5vw,62px);line-height:1.02;margin:0 0 12px}.art-inner h2 span{color:#e85b91}.art-inner p{color:#5f5055;margin:0;font-size:14px;letter-spacing:.5px;font-weight:700}
+.hero-badge{position:absolute;left:24px;bottom:22px;z-index:3;background:#151315;color:#fff;padding:10px 15px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.4px;transform:rotate(-4deg)}
+section{max-width:1150px;margin:auto;padding:70px 22px}.section-title{text-align:center;margin-bottom:36px}.section-title h2{font-family:Georgia,serif;font-size:42px;margin:0 0 8px}.section-title p{color:var(--muted);margin:0}
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}.photo{height:310px;background:#000;display:flex;align-items:center;justify-content:center;padding:10px}.photo img{width:100%;height:100%;object-fit:contain}.info{padding:18px}.info h3{margin:0 0 5px;font-family:Georgia,serif;font-size:22px}.price{font-weight:900;color:var(--hot);font-size:18px}.desc{color:var(--muted);font-size:14px;min-height:42px}.order-btn{display:block;text-align:center;background:var(--black);color:#fff;padding:11px;border-radius:999px;font-weight:800;margin-top:14px}
+.photo{cursor:pointer;position:relative}.photo:after{content:"Click to view";position:absolute;bottom:12px;right:12px;background:rgba(21,19,21,.82);color:#fff;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.2px}.product-gallery{display:flex;gap:8px;margin-top:10px}.product-gallery button{flex:1;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px;font-weight:800;cursor:pointer}.modal{position:fixed;inset:0;background:rgba(10,9,10,.88);z-index:100;display:none;align-items:center;justify-content:center;padding:22px}.modal.open{display:flex}.modal-card{width:min(920px,96vw);max-height:94vh;background:var(--cream);border-radius:24px;padding:18px;position:relative;display:flex;flex-direction:column}.modal-close{position:absolute;top:10px;right:12px;width:40px;height:40px;border-radius:50%;border:0;background:var(--black);color:#fff;font-size:24px;cursor:pointer;z-index:2}.modal-title{font-family:Georgia,serif;font-size:26px;margin:2px 55px 12px}.modal-image-wrap{background:#000;border-radius:18px;min-height:55vh;display:flex;align-items:center;justify-content:center;overflow:hidden}.modal-image{max-width:100%;max-height:68vh;object-fit:contain}.modal-tabs{display:flex;gap:8px;margin-top:12px}.modal-tabs button{flex:1;border:1px solid var(--line);background:#fff;padding:10px;border-radius:999px;font-weight:800;cursor:pointer}.modal-tabs button.active{background:var(--black);color:#fff}.view-hint{text-align:center;color:var(--muted);font-size:12px;margin:8px 0 0}@media(max-width:560px){.modal-card{padding:12px}.modal-image-wrap{min-height:48vh}.modal-image{max-height:58vh}}.placeholder{height:310px;background:repeating-linear-gradient(135deg,#f8efe8 0,#f8efe8 12px,#f2e5dc 12px,#f2e5dc 24px);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}.placeholder strong{font-family:Georgia,serif;font-size:26px}.placeholder small{display:block;color:var(--muted);margin-top:5px}
+.about{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:center}.about img{width:100%;border-radius:28px;display:block}.about h2{font-family:Georgia,serif;font-size:43px;margin-top:0}.verse{margin-top:25px;padding:22px;border-left:4px solid var(--pink);background:#fff;border-radius:0 18px 18px 0;font-family:Georgia,serif;font-size:18px}.verse small{font-family:Arial;color:var(--muted);font-size:13px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.info-card{background:#fff;border:1px solid var(--line);padding:24px;border-radius:20px}.info-card h3{margin-top:0;font-family:Georgia,serif;font-size:24px}.payment{font-size:16px}.payment b{color:var(--hot)}
+.order-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}.order-copy{background:var(--black);color:#fff;border-radius:24px;padding:30px}.order-copy h2{font-family:Georgia,serif;font-size:38px;margin-top:0}.order-copy p{color:#eee}.order-form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}.field{margin-bottom:15px}.field label{display:block;font-weight:800;margin-bottom:6px;font-size:14px}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d9c9c1;border-radius:12px;font:inherit;background:#fff}.field textarea{min-height:100px;resize:vertical}.submit{width:100%;border:0;background:var(--pink);padding:13px;border-radius:999px;font-weight:900;font-size:16px;cursor:pointer}.note{font-size:12px;color:var(--muted);margin-top:10px}
+footer{background:var(--black);color:#fff;text-align:center;padding:42px 22px}.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:15px 0}.footer-links a{color:#ffc1d7}.small{font-size:13px;color:#ccc}
+@media(max-width:850px){.hero,.about,.order-wrap{grid-template-columns:1fr}.shop-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}.hero{padding-top:55px}.hero-art{min-height:340px}.art-inner{min-height:290px!important}}
+@media(max-width:560px){nav{gap:11px;font-size:12px}.nav{align-items:flex-start}.logo{font-size:20px}.shop-grid{grid-template-columns:1fr}.photo,.placeholder{height:300px}.hero h1{font-size:52px}}
 </style>
 </head>
 <body>
+<header><div class="nav"><a class="logo" href="#home">Lauren’s <span>Clay Creations</span></a><nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#prices">Info</a><a href="#order">Order</a><a href="https://www.instagram.com/laurenjanea/" target="_blank" rel="noopener">Instagram</a></nav></div></header>
 
-<nav>
-  <div class="logo">Lauren's <span>Clay Creations</span></div>
-  <div>
-    <a href="#shop">Shop</a>
-    <a href="#prices">Prices</a>
-    <a href="#policies">Policies</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div>
-    <div class="eyebrow">Handmade • Custom • One of a Kind</div>
-    <h1>Lauren's<br><span style="color:#e98ca9">Clay Creations</span></h1>
-    <p>YOUR SHORT BUSINESS DESCRIPTION GOES HERE</p>
-    <a class="btn" href="#shop">Shop</a>
-    <a class="btn pink" href="https://www.instagram.com/laurenjanea/" target="_blank">Instagram</a>
-  </div>
-</header>
+<main>
+<section class="hero" id="home">
+<div class="hero-copy">
+<div class="kicker">Handmade • Small Business • Made with Intention</div>
+<h1>Made by hand. Made to be yours.</h1>
+<p>Welcome to Lauren’s Clay Creations, where handmade clay pieces meet bold ideas, personal style, and a little creativity.</p>
+<div class="location">📍 Kennesaw, GA &amp; Savannah, GA</div>
+<div class="buttons"><a class="btn primary" href="#shop">Shop the collection</a><a class="btn pink" href="https://www.instagram.com/laurenjanea/" target="_blank" rel="noopener">Follow @laurenjanea</a></div>
+</div>
+<div class="hero-art"><div class="art-inner"><div class="brand-mark"><div class="mini">Handmade • Custom • One of a Kind</div><h2>Lauren’s<br><span>Clay Creations</span></h2><p>Thoughtfully made. Uniquely yours.</p></div></div><div class="hero-badge">CREATE • CUSTOMIZE • COLLECT</div></div>
+</section>
 
 <section id="shop">
-  <div class="eyebrow">Shop</div>
-  <h2>My Creations</h2>
-  <div class="grid">
-    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
-    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
-    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
-    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
-    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
-    <article class="card"><div class="photo">ADD PRODUCT PHOTO</div><div class="card-body"><h3>PRODUCT NAME</h3><p class="blank">PRODUCT DESCRIPTION</p></div></article>
-  </div>
+<div class="section-title"><h2>Shop</h2><p>Choose a piece below, then use the order form to send your request.</p></div>
+<div class="shop-grid">
+<article class="product"><div class="photo" data-gallery='[{"src":"images/martini-olive-keychain.jpeg","label":"Photo"}]'><img src="images/martini-olive-keychain.jpeg" alt="Martini and olive inspired keychain"></div><div class="info"><h3>Martini Olive Keychain</h3><div class="price">$10</div><p class="desc">Handmade keychain with a fun drink-inspired design.</p><a class="order-btn" href="#order" data-product="Martini Olive Keychain">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/cherry-keychain.jpeg","label":"Photo"}]'><img src="images/cherry-keychain.jpeg" alt="Cherry keychain"></div><div class="info"><h3>Cherry Keychain</h3><div class="price">$11</div><p class="desc">Handmade cherry-inspired keychain.</p><a class="order-btn" href="#order" data-product="Cherry Keychain">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/chanel-keychain.jpeg","label":"Photo"}]'><img src="images/chanel-keychain.jpeg" alt="Chanel inspired keychain"></div><div class="info"><h3>Chanel Keychain</h3><div class="price">$11</div><p class="desc">Handmade statement keychain.</p><a class="order-btn" href="#order" data-product="Chanel Keychain">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/football-keychain.jpeg","label":"Photo"}]'><img src="images/football-keychain.jpeg" alt="Football keychain"></div><div class="info"><h3>Football Keychain</h3><div class="price">$4</div><p class="desc">Simple handmade football keychain.</p><a class="order-btn" href="#order" data-product="Football Keychain">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/hello-kitty-keychain.jpeg","label":"Photo"}]'><img src="images/hello-kitty-keychain.jpeg" alt="Hello Kitty inspired keychain"></div><div class="info"><h3>Hello Kitty Keychain</h3><div class="price">$8</div><p class="desc">Handmade character-inspired keychain.</p><a class="order-btn" href="#order" data-product="Hello Kitty Keychain">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/flower-lighter-case.jpeg","label":"Photo"}]'><img src="images/flower-lighter-case.jpeg" alt="Pink flower lighter case"></div><div class="info"><h3>Flower Lighter Case</h3><div class="price">$11</div><p class="desc">Handmade decorative lighter case.</p><a class="order-btn" href="#order" data-product="Flower Lighter Case">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/cherry-chapstick-holder.jpeg","label":"Photo"}]'><img src="images/cherry-chapstick-holder.jpeg" alt="Cherry chapstick holder"></div><div class="info"><h3>Cherry Chapstick Holder</h3><div class="price">$9</div><p class="desc">Cute handmade holder with a keychain clip.</p><a class="order-btn" href="#order" data-product="Cherry Chapstick Holder">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/steven-universe-front.jpeg","label":"Front"},{"src":"images/steven-universe-back.jpeg","label":"Back"}]'><img src="images/steven-universe-front.jpeg" alt="Steven Universe lighter case front"></div><div class="info"><h3>Steven Universe Lighter Case</h3><div class="price">$17</div><p class="desc">Front and back photos available. Handmade character-inspired design.</p><div class="product-gallery"><button type="button" data-open-gallery="steven-universe">View Front &amp; Back</button></div><a class="order-btn" href="#order" data-product="Steven Universe Lighter Case">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/spiderman-front.jpeg","label":"Front"},{"src":"images/spiderman-back.jpeg","label":"Back"}]'><img src="images/spiderman-front.jpeg" alt="Spider-Man lighter case front"></div><div class="info"><h3>Spider-Man Lighter Case</h3><div class="price">$20</div><p class="desc">Front and back photos available. Handmade superhero-inspired design.</p><div class="product-gallery"><button type="button" data-open-gallery="spiderman">View Front &amp; Back</button></div><a class="order-btn" href="#order" data-product="Spider-Man Lighter Case">Order This</a></div></article>
+<article class="product"><div class="photo" data-gallery='[{"src":"images/junk-hair-clips.jpeg","label":"Photo"}]'><img src="images/junk-hair-clips.jpeg" alt="Pink decorated junk hair clips"></div><div class="info"><h3>Junk Hair Clips</h3><div class="price">$5</div><p class="desc">Decorated statement hair clips.</p><a class="order-btn" href="#order" data-product="Junk Hair Clips">Order This</a></div></article>
+<article class="product"><div class="placeholder"><div><strong>Jewelry Trays</strong><small>Price: TBD<br>Photo coming soon</small></div></div><div class="info"><h3>Jewelry Trays</h3><div class="price">TBD</div><p class="desc">New product coming soon.</p><a class="order-btn" href="#order" data-product="Jewelry Trays">Ask About This</a></div></article>
+</div>
+<div class="section-title" style="margin-top:50px;margin-bottom:0"><p>Want something custom? <a href="#order" style="color:var(--hot);font-weight:800">DM me for custom-piece pricing.</a></p></div>
+</section>
+
+<section id="about">
+<div class="about"><img src="images/lauren-about.jpeg" alt="Lauren, owner of Lauren’s Clay Creations"><div><div class="kicker">Meet the maker</div><h2>Hi, I’m Lauren! ♡</h2><p>I started Lauren’s Clay Creations because I wanted to turn my creativity and love for making things into a small business. What started as simply making clay pieces has grown into something I’m really proud of.</p><p>I love being able to create unique, handmade pieces that people can enjoy and make their own. As I continue growing my small business, I’m excited to keep creating new designs, learning new techniques, and sharing my work with others.</p><p>Thank you for supporting my small business and allowing me to do something I genuinely enjoy!</p><div class="verse">“Whatever you do, work at it with all your heart, as working for the Lord.”<br><small>Colossians 3:23</small></div></div></div>
 </section>
 
 <section id="prices">
-  <div class="eyebrow">Prices</div>
-  <h2>Price List</h2>
-  <div class="price-list">
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-    <div class="price-row"><strong>PRODUCT / SERVICE</strong><span>$___</span></div>
-  </div>
-  <div class="note">ADD ANY PRICING NOTES HERE — custom fees, rush fees, shipping, deposits, etc.</div>
+<div class="section-title"><h2>Good to know</h2><p>A few important details before you order.</p></div>
+<div class="info-grid">
+<div class="info-card"><h3>💳 Payment</h3><p class="payment">Cash App: <b>$lsjdavis260</b><br>Zelle: <b>Accepted</b><br>Venmo: <b>Accepted</b></p><p class="note">Please wait for your order to be confirmed before sending payment.</p></div>
+<div class="info-card"><h3>🎨 Custom Pieces</h3><p>Custom pieces are available. Please <b>DM @laurenjanea</b> for custom pricing. Prices depend on the design, size and materials needed.</p></div>
+<div class="info-card"><h3>📦 Shipping</h3><p>Shipping is available, but the <b>customer is responsible for the cost of shipping</b>. Shipping cost will be communicated before the order is finalized.</p><p>Local options are available in Kennesaw, GA and Savannah, GA.</p></div>
+</div>
 </section>
 
-<section id="policies">
-  <div class="eyebrow">Policies</div>
-  <h2>Before You Order</h2>
-  <div class="policy-grid">
-    <div class="policy"><h3>Custom Orders</h3><p>WRITE YOUR CUSTOM ORDER POLICY HERE</p></div>
-    <div class="policy"><h3>Payment</h3><p>WRITE YOUR PAYMENT POLICY HERE</p></div>
-    <div class="policy"><h3>Processing Time</h3><p>WRITE YOUR PROCESSING / TURNAROUND POLICY HERE</p></div>
-    <div class="policy"><h3>Returns & Exchanges</h3><p>WRITE YOUR RETURN / EXCHANGE POLICY HERE</p></div>
-    <div class="policy"><h3>Shipping / Pickup</h3><p>WRITE YOUR SHIPPING OR LOCAL PICKUP POLICY HERE</p></div>
-    <div class="policy"><h3>Care Instructions</h3><p>WRITE YOUR PRODUCT CARE INFORMATION HERE</p></div>
-  </div>
+<section id="order">
+<div class="section-title"><h2>Place an Order</h2><p>Send your request and I’ll follow up with you on Instagram.</p></div>
+<div class="order-wrap">
+<div class="order-copy"><h2>Let’s make something cute. ♡</h2><p>Fill this out with what you want. Submitting the form prepares your order message and opens Instagram so you can DM it to <b>@laurenjanea</b>.</p><p><b>Custom piece?</b> Choose “Custom Piece” and include as many details as you can.</p><p class="small">This is an order request, not an automatic payment or final order. Your order is confirmed after we discuss availability, customization and shipping.</p></div>
+<form class="order-form" id="orderForm">
+<div class="field"><label for="name">Name</label><input id="name" required placeholder="Your name"></div>
+<div class="field"><label for="contact">Instagram or email</label><input id="contact" required placeholder="@username or email"></div>
+<div class="field"><label for="product">What would you like?</label><select id="product" required><option value="">Choose a product</option><option>Martini Olive Keychain — $10</option><option>Cherry Keychain — $11</option><option>Chanel Keychain — $11</option><option>Football Keychain — $4</option><option>Hello Kitty Keychain — $8</option><option>Flower Lighter Case — $11</option><option>Cherry Chapstick Holder — $9</option><option>Steven Universe Lighter Case — $17</option><option>Spider-Man Lighter Case — $20</option><option>Junk Hair Clips — $5</option><option>Jewelry Trays — TBD</option><option>Custom Piece — DM for pricing</option></select></div>
+<div class="field"><label for="quantity">Quantity</label><input id="quantity" type="number" min="1" value="1" required></div>
+<div class="field"><label for="delivery">Shipping or local option</label><select id="delivery" required><option value="">Choose one</option><option>Shipping</option><option>Kennesaw, GA local option</option><option>Savannah, GA local option</option></select></div>
+<div class="field"><label for="details">Customization / notes</label><textarea id="details" placeholder="Tell me any colors, characters, themes, sizes or other details you want."></textarea></div>
+<button class="submit" type="submit">Prepare My Order DM</button><div class="note" id="status"></div>
+</form>
+</div>
 </section>
+</main>
+<div class="modal" id="imageModal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-label="Product image viewer"><button class="modal-close" id="modalClose" aria-label="Close image viewer">×</button><div class="modal-title" id="modalTitle">Product</div><div class="modal-image-wrap"><img class="modal-image" id="modalImage" src="" alt=""></div><div class="modal-tabs" id="modalTabs"></div><div class="view-hint">Tap Front or Back to view each side.</div></div></div>
 
-<section id="about" class="about">
-  <div class="about-inner">
-    <div class="eyebrow">About</div>
-    <h2>Meet Lauren ♡</h2>
-    <p class="blank" style="max-width:760px;font-size:1.05rem;line-height:1.8">WRITE YOUR ABOUT ME / BUSINESS STORY HERE</p>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="eyebrow" style="color:#ffb0c7">Contact</div>
-  <h2>Let's Create Something!</h2>
-  <p>ADD YOUR CONTACT INFORMATION OR ORDER INSTRUCTIONS HERE</p>
-  <a class="btn pink" href="https://www.instagram.com/laurenjanea/" target="_blank">@laurenjanea</a>
-</section>
-
-<footer>© 2026 Lauren's Clay Creations • ADD ANY FOOTER INFORMATION HERE</footer>
-
+<footer><div class="logo">Lauren’s <span style="color:#ffc1d7">Clay Creations</span></div><div class="footer-links"><a href="https://www.instagram.com/laurenjanea/" target="_blank" rel="noopener">Instagram @laurenjanea</a><a href="#shop">Shop</a><a href="#order">Order</a></div><div class="small">Kennesaw, GA • Savannah, GA<br>Handmade with love ♡</div></footer>
+<script>
+const modal=document.getElementById('imageModal');
+const modalImage=document.getElementById('modalImage');
+const modalTitle=document.getElementById('modalTitle');
+const modalTabs=document.getElementById('modalTabs');
+const modalClose=document.getElementById('modalClose');
+let galleryItems=[];
+let galleryTitle='';
+function openGallery(items,title){galleryItems=items;galleryTitle=title;modalTitle.textContent=title;modalTabs.innerHTML='';items.forEach((item,i)=>{const b=document.createElement('button');b.type='button';b.textContent=item.label||`Photo ${i+1}`;b.addEventListener('click',()=>showGalleryItem(i));modalTabs.appendChild(b)});showGalleryItem(0);modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function showGalleryItem(i){const item=galleryItems[i];modalImage.src=item.src;modalImage.alt=`${galleryTitle} ${item.label||''}`;[...modalTabs.children].forEach((b,n)=>b.classList.toggle('active',n===i));}
+function closeGallery(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.querySelectorAll('.photo[data-gallery]').forEach(el=>el.addEventListener('click',()=>openGallery(JSON.parse(el.dataset.gallery),el.closest('.product').querySelector('h3').textContent)));
+document.querySelectorAll('[data-open-gallery]').forEach(btn=>btn.addEventListener('click',()=>{const p=btn.closest('.product');openGallery(JSON.parse(p.querySelector('.photo').dataset.gallery),p.querySelector('h3').textContent)}));
+modalClose.addEventListener('click',closeGallery);modal.addEventListener('click',e=>{if(e.target===modal)closeGallery()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGallery()});
+document.querySelectorAll('[data-product]').forEach(btn=>btn.addEventListener('click',()=>{const p=btn.dataset.product;const sel=document.getElementById('product');[...sel.options].forEach(o=>{if(o.textContent.startsWith(p+' ')) sel.value=o.value});}));
+document.getElementById('orderForm').addEventListener('submit',async e=>{e.preventDefault();const name=document.getElementById('name').value.trim();const contact=document.getElementById('contact').value.trim();const product=document.getElementById('product').value;const qty=document.getElementById('quantity').value;const delivery=document.getElementById('delivery').value;const details=document.getElementById('details').value.trim();const msg=`Hi Lauren! I’d like to place an order.\n\nName: ${name}\nInstagram/email: ${contact}\nProduct: ${product}\nQuantity: ${qty}\nShipping/local option: ${delivery}\nCustomization/notes: ${details||'None'}\n\nThank you!`;try{await navigator.clipboard.writeText(msg);document.getElementById('status').textContent='Order message copied! Instagram will open next. Paste the message into your DM to @laurenjanea.';}catch{document.getElementById('status').textContent='Instagram will open next. Copy your order details from this page if needed.'}window.open('https://www.instagram.com/laurenjanea/','_blank','noopener');});
+</script>
 </body>
 </html>

@@ -71,7 +71,17 @@ header, nav { background:#fff8ef !important; }
 <section id="prices"><div class="section-title"><h2>Info</h2><p>Simple pricing and ordering details.</p></div><div class="info-grid"><div class="info-card"><h3>Payments</h3><p class="payment"><b>Cash App:</b> $lsjdavis260<br><b>Zelle:</b> Available<br><b>Venmo:</b> Available</p></div><div class="info-card"><h3>Shipping</h3><p>Customer is responsible for shipping costs. Pickup options can be discussed when ordering.</p></div><div class="info-card"><h3>Custom Pieces</h3><p>For custom-piece pricing, send me a DM on Instagram at <b>@laurenjanea</b> before ordering.</p></div></div></section>
 <section id="policies"><div class="section-title"><h2>Policies</h2><p>A few things to know before ordering.</p></div><div class="info-grid"><div class="info-card"><h3>Payment</h3><p>Payment is required before a custom order is started. An order is not booked until payment is received.</p></div><div class="info-card"><h3>Processing Time</h3><p>Everything is handmade, so turnaround depends on the piece. Your estimated turnaround will be provided when you order.</p></div><div class="info-card"><h3>Care</h3><p>Handle handmade pieces gently and keep them away from extreme heat, water and excessive pressure.</p></div></div></section>
 <div class="about-wrap" id="about"><div class="about"><div class="about-photo"><img src="images/lauren-about-new.jpeg" alt="Lauren, owner of Lauren’s Clay Creations"></div><div><div class="kicker">Meet the maker</div><h2>Hi, I’m Lauren! ♡</h2><p>I started Lauren’s Clay Creations because I wanted to turn my creativity and love for making things into a small business. What started as simply making clay pieces has grown into something I’m really proud of.</p><p>I love being able to create unique, handmade pieces that people can enjoy and make their own. As I continue growing my small business, I’m excited to keep creating new designs, learning new techniques, and sharing my work with others. Thank you for supporting my small business and allowing me to do something I genuinely enjoy!</p><div class="verse">“Whatever you do, work at it with all your heart, as working for the Lord.”<br><small>Colossians 3:23</small></div></div></div></div>
-<section id="order"><div class="order-wrap"><div class="order-copy"><div class="kicker" style="color:#ffb0c7">Ready to order?</div><h2>Let’s make it yours.</h2><p>Choose your item below and send your order details. For custom pieces, DM @laurenjanea for pricing first.</p><p>Shipping is paid by the customer.</p></div><form class="order-form" id="orderForm"><div class="field"><label>Name</label><input id="name" required></div><div class="field"><label>Instagram or Email</label><input id="contact" required></div><div class="field"><label>Product</label><select id="product" required><option>Martini Olive Keychain</option><option>Cherry Keychain</option><option>Chanel Keychain</option><option>Football Keychain</option><option>Hello Kitty Keychain</option><option>Flower Lighter Case</option><option>Cherry Chapstick Holder</option><option>Steven Universe Lighter Case</option><option>Spider-Man Lighter Case</option><option>Rey Mysterio Lighter Case</option><option>Coraline Keychain</option><option>Spider-Man Keychain</option><option>Junk Hair Clips</option><option>Jewelry Trays</option><option>Bracelet Charms</option></select></div><div class="field"><label>Quantity</label><input id="quantity" type="number" min="1" value="1" required></div><div class="field"><label>Customization / Notes</label><textarea id="notes"></textarea></div><button class="submit" type="submit">Send Order Request</button><div class="note">This button prepares an order message for you to send through Instagram. Orders are not confirmed until payment and details are approved.</div></form></div></section>
+<section id="order"><div class="order-wrap"><div class="order-copy"><div class="kicker" style="color:#ffb0c7">Ready to order?</div><h2>Let’s make it yours.</h2><p>Choose your item below and send your order details. For custom pieces, DM @laurenjanea for pricing first.</p><p>Shipping is paid by the customer.</p></div><form class="order-form" id="orderForm" action="https://formspree.io/f/xppqjnlb" method="POST">
+<div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+<div class="field"><label for="contact">Instagram or Email</label><input id="contact" name="contact" required></div>
+<div class="field"><label for="product">Product</label><select id="product" name="product" required><option>Martini Olive Keychain</option><option>Cherry Keychain</option><option>Chanel Keychain</option><option>Football Keychain</option><option>Hello Kitty Keychain</option><option>Flower Lighter Case</option><option>Cherry Chapstick Holder</option><option>Steven Universe Lighter Case</option><option>Spider-Man Lighter Case</option><option>Rey Mysterio Lighter Case</option><option>Coraline Keychain</option><option>Spider-Man Keychain</option><option>Junk Hair Clips</option><option>Jewelry Trays</option><option>Bracelet Charms</option></select></div>
+<div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" value="1" required></div>
+<div class="field"><label for="notes">Customization / Notes</label><textarea id="notes" name="notes" placeholder="Describe any custom details here"></textarea></div>
+<input type="hidden" name="_subject" value="New order request - Lauren’s Clay Creations">
+<button class="submit" id="submitOrder" type="submit">Submit Order Request</button>
+<div class="note">Your request will be sent directly to Lauren by email. This is an order request, not a confirmed order or payment. Lauren will contact you to confirm details, shipping, and payment.</div>
+<p id="orderStatus" role="status" aria-live="polite" style="display:none;margin-top:12px;font-weight:700"></p>
+</form></div></section>
 </main>
 <footer><div class="footer-links"><a href="#shop">Shop</a><a href="#about">About</a><a href="#order">Order</a><a href="https://www.instagram.com/laurenjanea/" target="_blank">Instagram</a></div><div class="small">© 2026 Lauren’s Clay Creations • Handmade by Lauren</div></footer>
 <div class="modal" id="galleryModal"><div class="modal-box"><button class="close" onclick="closeGallery()">×</button><h2 id="galleryTitle" style="font-family:Georgia,serif"></h2><div class="modal-images" id="galleryImages"></div></div></div>
@@ -91,6 +101,38 @@ document.querySelectorAll('#reviewStars button').forEach(b=>b.addEventListener('
 function saveReview(){if(!selectedStars){alert('Please choose a star rating.');return}let saved=JSON.parse(localStorage.getItem('lccStats')||'{}');let s=saved[selectedReviewProduct]||products[selectedReviewProduct];s.reviews=(s.reviews||0)+1;saved[selectedReviewProduct]=s;localStorage.setItem('lccStats',JSON.stringify(saved));closeReview();updateCardStats();alert('Thank you for your review!')}
 document.querySelectorAll('.review-link').forEach(b=>b.addEventListener('click',()=>openReview(b.dataset.review)));
 document.querySelectorAll('.order-btn').forEach(b=>b.addEventListener('click',()=>{document.getElementById('product').value=b.dataset.product}));
-document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value,contact=document.getElementById('contact').value,product=document.getElementById('product').value,q=document.getElementById('quantity').value,notes=document.getElementById('notes').value;let s=JSON.parse(localStorage.getItem('lccStats')||'{}');s[product]=s[product]||{orders:0,reviews:0};s[product].orders+=Number(q);localStorage.setItem('lccStats',JSON.stringify(s));updateCardStats();const msg=`Hi Lauren! I’d like to order ${q} x ${product}.%0AName: ${encodeURIComponent(name)}%0AContact: ${encodeURIComponent(contact)}%0ANotes: ${encodeURIComponent(notes)}`;window.open(`https://ig.me/m/laurenjanea?text=${msg}`,'_blank');});
+document.getElementById('orderForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const form=e.currentTarget;
+  const status=document.getElementById('orderStatus');
+  const button=document.getElementById('submitOrder');
+  const endpoint=form.getAttribute('action');
+  button.disabled=true;
+  button.textContent='Sending…';
+  status.style.display='none';
+  try{
+    const response=await fetch(endpoint,{
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+    if(response.ok){
+      status.style.display='block';
+      status.style.color='#267344';
+      status.textContent='Thank you! Your order request was sent to Lauren. It is not confirmed until Lauren contacts you to approve the details, shipping, and payment.';
+      form.reset();
+      document.getElementById('quantity').value='1';
+    }else{
+      const result=await response.json().catch(()=>({}));
+      throw new Error(result.errors?.map(error=>error.message).join(', ')||'Please try again in a moment.');
+    }
+  }catch(error){
+    status.style.display='block';
+    status.style.color='#b42318';
+    status.textContent='Sorry, your request could not be sent. '+error.message+' Please try again or contact @laurenjanea on Instagram.';
+  }finally{
+    button.disabled=false;
+    button.textContent='Submit Order Request';
+  }
+});
 updateCardStats();
-</script></body></html>
